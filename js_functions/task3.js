@@ -1,6 +1,5 @@
-function f1(num) {
-    console.log(num);
+function countDown (num) {
     if (num <= 0) return;
-    f1(num-1);
-}
-f1(8)
+    console.log(num);
+    countDown(num-1);
+}countDown(8)
