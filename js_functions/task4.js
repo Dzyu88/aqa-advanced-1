@@ -1,10 +1,12 @@
 function divide (numerator, denominator){
     try {
-        const action = numerator/denominator;
-                if (typeof numerator != "number" || typeof denominator != "number")
+        if (typeof numerator != "number" || typeof denominator != "number")
             throw new Error("both arguments must be a number")
         if (denominator === 0)
             throw new Error("Denominator can't be 0")
+
+        return numerator/denominator;
+
     } catch (err) {
         console.log("Error has been happened:", err.message)
     } finally {
