@@ -9,15 +9,15 @@ import {Book} from "./Book.mjs";
         return this._fileFormat;
     }
     set fileFormat(newFileFormat) {
-        if (newFileFormat !== "pdf" || newFileFormat !== "epub" || newFileFormat !== "doc") {
+        if (!["pdf", "epub","doc" ].includes(newFileFormat)) {
             console.log('We have no books in your format');
             return;
         }
         this._fileFormat = newFileFormat;
     }
 
-    static fromBook(Book, fileFormat){
-        return new EBook(Book.title, Book.author, Book.published, fileFormat);
+     static fromBook(book, fileFormat){
+        return new EBook(book.title, book.author, book.published, fileFormat);
     }
     printInfo() {
         console.log(`The Book ${this.title} by ${this.author} was published in ${this.published} and has ${this.fileFormat} format`)
