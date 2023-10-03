@@ -10,10 +10,10 @@ class TodoController {
     }
 
 }
-const controller1 = new TodoController("https://jsonplaceholder.typicode.com")
-controller1.getTodoById(1).then((value1) => console.log(value1));
-controller1.getTodoById(2).then((value1) => console.log(value1));
-controller1.getTodoById(3).then((value1) => console.log(value1));
+const todoController = new TodoController("https://jsonplaceholder.typicode.com")
+todoController.getTodoById(1).then((value1) => console.log(value1));
+todoController.getTodoById(2).then((value1) => console.log(value1));
+todoController.getTodoById(3).then((value1) => console.log(value1));
 
 //Part2
 class UserController {
@@ -27,7 +27,7 @@ class UserController {
     }
 
 }
-const controller2 = new UserController("https://jsonplaceholder.typicode.com")
-controller2.getUserById(1).then((value2) => console.log(value2));
-controller2.getUserById(2).then((value2) => console.log(value2));
-controller2.getUserById(3).then((value2) => console.log(value2));
+const userController = new UserController("https://jsonplaceholder.typicode.com")
+userController.getUserById(1).then((value2) => console.log(value2));
+userController.getUserById(2).then((value2) => console.log(value2));
+userController.getUserById(3).then((value2) => console.log(value2));
